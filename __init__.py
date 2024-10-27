@@ -2,7 +2,7 @@
 ##  GPL License
 ##
 ##  Blender Addon | SKkeeper
-##  Copyright (C) 2020  Johannes Rauch
+##  Copyright (C) 2024  Johannes Rauch, Tyler Walker
 ##
 ##  This program is free software: you can redistribute it and/or modify
 ##  it under the terms of the GNU General Public License as published by
