@@ -516,6 +516,12 @@ def modifier_panel(self, context):
     layout.operator("sk.apply_mods_choice_sk")
 
 
+def modifier_panel_buttons(self, context):
+    layout = self.layout
+    layout.separator()
+    layout.operator("sk.apply_mods_choice_sk", text="Apply Modifiers (Keep Shapekeys)")
+
+
 def register():
     from bpy.utils import register_class
 
@@ -523,6 +529,7 @@ def register():
         register_class(cls)
 
     bpy.types.VIEW3D_MT_object.append(modifier_panel)
+    bpy.types.DATA_PT_modifiers.prepend(modifier_panel_buttons)
 
 
 def unregister():
@@ -532,3 +539,4 @@ def unregister():
         unregister_class(cls)
 
     bpy.types.VIEW3D_MT_object.remove(modifier_panel)
+    bpy.types.DATA_PT_modifiers.remove(modifier_panel_buttons)
